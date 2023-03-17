@@ -17,14 +17,14 @@
             padding:"10px 20px",
             border:0,
             borderRadius:10,
-            fontSize:fontSize,
+            fontSize,
         }}>{text}
         </button>
     }
     const MemorizedBtn = React.memo(Btn);
     Btn.propTypes = {
         text: PropTypes.string,
-        fontSize: PropTypes.int,
+        fontSize: PropTypes.number,
     };
     function App() {
         const [value, setValue] = React.useState("Save Changes");
