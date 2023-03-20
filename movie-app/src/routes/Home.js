@@ -10,7 +10,7 @@ function Home() {
         `http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=31b7b983147a4ed21fe538ba07011d1e&targetDt=20230318`
       )
     ).json();
-    setMovies(json.data.boxOfficeResult.dailyBoxOfficeList);
+    setMovies(json.boxOfficeResult.dailyBoxOfficeList);
     setLoading(false);
   };
   useEffect(() => {

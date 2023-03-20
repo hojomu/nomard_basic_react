@@ -1,21 +1,21 @@
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {BrowserRouter, Route, Routes , Link} from "react-router-dom";
 
-const router = createBrowserRouter([
-{
-   path: "",
-   element: <Home />,
-},
-{
-   path: "/movie",
-   element: <Detail />,
-},
-]);
-  
-
-function App() {
-  return ;
+function App(){
+  return (
+    <BrowserRouter>
+      <nav>
+        <Link to="/">HOME</Link>
+        <Link to="/movie">Detail</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/movie/:id" element={<Detail/>}/>
+      </Routes>
+      <footer>footer 입니다.</footer>
+    </BrowserRouter>
+  );
 }
 
 export default App;

@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 function Movie({ title, openDt, rank }) {
   return (
     <div>
-      <h2>{rank}위 : {title}</h2>
+      <h2>
+        <Link to={`/movie/${rank}`}>{rank}위 : {title}</Link>
+      </h2>
       <p>{openDt}</p>
     </div>
   );
